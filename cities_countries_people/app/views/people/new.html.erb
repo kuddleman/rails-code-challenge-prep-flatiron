@@ -1,0 +1,15 @@
+<h1>An Edit form using a collections array</h1>
+
+
+
+<%= form_for(@person) do |f| %>
+  <%= f.label :name %>: <%= f.text_field :name %><br>
+  <%= f.label :native_tongue %>: <%= f.text_field :native_tongue %><br>
+  <%= f.label :gender%>: <%= f.text_field :gender%>
+
+  <%= f.collection_select :country_id, Country.all, :id, :name %>
+  <%= f.collection_select :city_id, City.all, :id, :name %>
+  
+  <%= f.submit %>
+
+<% end %>

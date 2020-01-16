@@ -1,0 +1,15 @@
+<h1>This is my Countries Edit Form, YAY!</h1>
+
+<%= form_for @country  do |f| %>
+  <%= f.text_field :name %><br>
+  <%= f.text_field :continent %><br>
+  <%= f.submit %>
+
+<% end %>  
+
+
+
+
+<h1>Here is the Delete Button</h1>
+
+<%= link_to "Delete", country_path(@country), data: { method: :delete } %>
